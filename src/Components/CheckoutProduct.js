@@ -1,4 +1,5 @@
 import { useStateValue } from "../StateProvider";
+import FlipMove from 'react-flip-move';
 
 function CheckoutProduct({ id, image, title, price, rating }) {
 

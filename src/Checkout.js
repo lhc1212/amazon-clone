@@ -3,6 +3,7 @@ import CheckoutProduct from "./Components/CheckoutProduct";
 import { useStateValue } from "./StateProvider";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "./firebase";
+import FlipMove from 'react-flip-move';
 
 function Checkout() {
     const [{ basket }] = useStateValue();
@@ -23,15 +24,19 @@ function Checkout() {
                     <h3 className="text-xl ml-[10px] font-semibold">Hello, {user?.displayName}</h3>
                     <h2 className="text-xl mr-[10px] p-[10px] font-bold border-b">Your Shopping Basket</h2>
 
-                    {basket.map((item) => (
-                        <CheckoutProduct
-                            id={item.id}
-                            title={item.title}
-                            image={item.image}
-                            price={item.price}
-                            rating={item.rating}
-                        />
-                    ))}
+                    <FlipMove>
+                        {basket.map((item) => (
+                            <FlipMove>
+                                <CheckoutProduct
+                                    id={item.id}
+                                    title={item.title}
+                                    image={item.image}
+                                    price={item.price}
+                                    rating={item.rating}
+                                />
+                            </FlipMove>
+                        ))}
+                    </FlipMove>
                 </div>
             </div>
 
