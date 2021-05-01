@@ -1,7 +1,6 @@
 import { useStateValue } from "../StateProvider";
-import FlipMove from 'react-flip-move';
 
-function CheckoutProduct({ id, image, title, price, rating }) {
+function CheckoutProduct({ id, image, title, price, rating, hideButton }) {
 
     const [{ basket }, dispatch] = useStateValue();
 
@@ -38,9 +37,11 @@ function CheckoutProduct({ id, image, title, price, rating }) {
                         ))}
                 </div>
 
-                <button onClick={removeFromBasket} className="bg-[#f0c14b] mt-[10px] px-2 py-2 rounded-[3px] text-[15px] font-medium text-black focus:outline-none hover:bg-[#CC9134] active:ring-2 active:ring-[#F79B35]">
-                    Remove from Basket
-                </button>
+                {!hideButton && (
+                    <button onClick={removeFromBasket} className="bg-[#f0c14b] mt-[10px] px-2 py-2 rounded-[3px] text-[15px] font-medium text-black focus:outline-none hover:bg-[#CC9134] active:ring-2 active:ring-[#F79B35]">
+                        Remove from Basket
+                    </button>
+                )}
             </div>
         </div>
     )

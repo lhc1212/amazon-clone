@@ -24,4 +24,12 @@
   .productRow {
     @apply flex mx-5 z-100;
   }
+
+  .paymentSection {
+    @apply flex p-[20px] mx-[20px] border-b border-gray-300;
+  }
+
+  .paymentTitle {
+    @apply flex-2 text-white font-semibold;
+  }
 }

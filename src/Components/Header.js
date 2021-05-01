@@ -46,10 +46,12 @@ function Header() {
                     )}
                 </Link>
 
-                <div className="headerOption">
-                    <span className="headerOptionLineOne">Returns</span>
-                    <span className="headerOptionLineTwo">& Orders</span>
-                </div>
+                <Link to="/orders">
+                    <div className="headerOption">
+                        <span className="headerOptionLineOne">Returns</span>
+                        <span className="headerOptionLineTwo">& Orders</span>
+                    </div>
+                </Link>
 
                 <Link to="checkout">
                     <div className="flex items-center cursor-pointer">

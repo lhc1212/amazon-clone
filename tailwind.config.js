@@ -16,6 +16,15 @@ module.exports = {
       '100': 100,
       'auto': 'auto',
     },
+    flex: {
+      '1': '1 1 0%',
+      auto: '1 1 auto',
+      initial: '0 1 auto',
+      inherit: 'inherit',
+      none: 'none',
+      '2': '2 2 0%',
+      '8': '8 8 0%',
+    },
     extend: {},
   },
   variants: {

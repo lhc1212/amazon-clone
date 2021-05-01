@@ -21,7 +21,7 @@ function Checkout() {
                 />
 
                 <div>
-                    <h3 className="text-xl ml-[10px] font-semibold">Hello, {user?.displayName}</h3>
+                    <h3 className="text-xl ml-[10px] font-semibold">Hello, {user?.displayName}!</h3>
                     <h2 className="text-xl mr-[10px] p-[10px] font-bold border-b">Your Shopping Basket</h2>
 
                     <FlipMove>
