@@ -1,11 +1,8 @@
 import moment from "moment";
 import CurrencyFormat from "react-currency-format";
-import { useStateValue } from "../StateProvider";
 import CheckoutProduct from "./CheckoutProduct";
 
 function Order({ order }) {
-    const [{ basket }] = useStateValue();
-
     return (
         <div className="relative p-[40px] my-[20px] border-t border-b border-[#e08f33]">
             <h2 className="text-[25px] font-semibold">Order</h2>
